@@ -69,6 +69,14 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://github.com/abhijnanacharya/MajorProject_Goal_Proaramming",
 		},
+		{
+			title: "Maze Explorer",
+			description:
+				"Explore and solve randomly generated mazes using the Breadth-First Search (BFS) algorithm. Click to set start and end points and watch the algorithm find the shortest path in real-time.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			linkText: "View Project",
+			link: "https://github.com/abhijnanacharya/maze_solver_visual",
+		},
 
 		{
 			title: "MarketPlace",

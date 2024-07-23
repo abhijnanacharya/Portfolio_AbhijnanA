@@ -54,7 +54,7 @@ const Homepage = () => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setLoading(false);
-		}, 3000);
+		}, 1200);
 
 		return () => clearTimeout(timer);
 	}, []);
