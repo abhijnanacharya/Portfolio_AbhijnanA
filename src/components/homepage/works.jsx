@@ -15,6 +15,19 @@ const Works = () => {
 					<div className="works-body">
 						<div className="work">
 							<img
+								src="https://sapphirestudios.co/wp-content/uploads/2023/09/cropped-favicon-270x270.png"
+								alt="Sapphire Apps Studio"
+								className="work-image"
+							/>
+							<div className="work-title">Sapphire Apps</div>
+							<div className="work-subtitle">
+								Software Engineer Co-Op
+							</div>
+							<div className="work-duration">2024 - Present</div>
+						</div>
+
+						<div className="work">
+							<img
 								src="../skill-lync.png"
 								alt="skill-lync"
 								className="work-image"
@@ -49,9 +62,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Machine Learning Intern
 							</div>
-							<div className="work-duration">
-								Jan 2022 - Jul 2022
-							</div>
+							<div className="work-duration">2022</div>
 						</div>
 					</div>
 				}
