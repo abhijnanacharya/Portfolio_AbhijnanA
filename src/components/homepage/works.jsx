@@ -21,7 +21,7 @@ const Works = () => {
 							/>
 							<div className="work-title">Sapphire Apps</div>
 							<div className="work-subtitle">
-								Software Engineer Co-Op
+								Software Engineer Intern
 							</div>
 							<div className="work-duration">2024 - Present</div>
 						</div>
@@ -36,20 +36,7 @@ const Works = () => {
 							<div className="work-subtitle">
 								Full-Stack Software Engineer
 							</div>
-							<div className="work-duration">2022 - 2023</div>
-						</div>
-
-						<div className="work">
-							<img
-								src="https://assets-global.website-files.com/626fcecbc824dd1c670451ba/6270fa6368d39cdf2366f5e7_logo-grey.svg"
-								alt="Nova-Benefits"
-								className="work-image"
-							/>
-							<div className="work-title">Nova-Benefits</div>
-							<div className="work-subtitle">
-								Software Engineer
-							</div>
-							<div className="work-duration">2021 - 2022</div>
+							<div className="work-duration">2021 - 2023</div>
 						</div>
 
 						<div className="work">
@@ -60,9 +47,9 @@ const Works = () => {
 							/>
 							<div className="work-title">Amazon</div>
 							<div className="work-subtitle">
-								Machine Learning Intern
+								Machine Learning Engineer Intern
 							</div>
-							<div className="work-duration">2022</div>
+							<div className="work-duration">2021</div>
 						</div>
 					</div>
 				}

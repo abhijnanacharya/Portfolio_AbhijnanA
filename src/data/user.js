@@ -2,7 +2,7 @@ const INFO = {
 	main: {
 		title: "Portfolio Abhijnan Acharya",
 		name: "Abhijnan Acharya",
-		email: "aacharya3@hawk.iit.edu",
+		email: "aacharya3@hawk.illinoistech.edu",
 		logo: "../logo.png",
 	},
 
@@ -34,6 +34,30 @@ const INFO = {
 	},
 
 	projects: [
+		{
+			title: "Talos",
+			description:
+				"Talos is a YAML-native AI Agent Orchestration Framework inspired by tools like Airflow and Kubernetes. Designed to automate complex multi-agent LLM workflows with modularity, clarity, and reusability. Includes CLI tool for running dynamic DAGs and summarizing email-based P0 tasks.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			linkText: "View Project",
+			link: "https://github.com/abhijnanacharya/talos_cli",
+		},
+		{
+			title: "PPLX-GPT",
+			description:
+				"A web-based RAG system that combines Perplexity search with GPT-4 to deliver real-time, context-aware answers. Features a clean UI, OpenAI embeddings, FAISS-based reranking, and streamable GPT responses. Ideal for grounded LLM queries.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			linkText: "View Project",
+			link: "https://github.com/abhijnanacharya/PPLX_GPT",
+		},
+		{
+			title: "Job Description Analyzer",
+			description:
+				"AI-powered tool that generates Boolean search strings from job descriptions and evaluates resume relevance against them. Leverages OpenAI GPT-4o and supports PDF resume uploads with keyword scoring and extraction.",
+			logo: "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+			linkText: "View Project",
+			link: "https://github.com/abhijnanacharya/job_desc_analyzer",
+		},
 		{
 			title: "Tic-Tac-Toe",
 			description:
