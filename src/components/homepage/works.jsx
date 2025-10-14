@@ -47,7 +47,7 @@ const Works = () => {
 							/>
 							<div className="work-title">Amazon</div>
 							<div className="work-subtitle">
-								Machine Learning Engineer Intern
+								Software Engineer Intern (C-Ops Team)
 							</div>
 							<div className="work-duration">2021</div>
 						</div>
