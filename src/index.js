@@ -4,13 +4,24 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import posthog from "posthog-js";
+import { PostHogProvider } from "posthog-js/react";
+
+posthog.init(process.env.REACT_APP_POSTHOG_KEY, {
+	api_host: process.env.REACT_APP_POSTHOG_HOST,
+	autocapture: true,
+	capture_pageview: true,
+	// persistence: 'localStorage', // 'cookie' | 'memory'
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
+		<PostHogProvider client={posthog}>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</PostHogProvider>
 	</React.StrictMode>
 );
 
