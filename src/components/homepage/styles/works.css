@@ -5,14 +5,19 @@
 }
 
 .work {
-	display: flex;
-	align-items: flex-start;
-	position: relative;
+	display: grid;
+	grid-template-columns: 96px minmax(0, 1fr) auto;
+	grid-template-rows: auto auto;
+	column-gap: 20px;
+	row-gap: 8px;
+	align-items: start;
 	width: 100%;
-	padding-bottom: 28px;
+	padding-bottom: 30px;
 }
 
 .work-image {
+	grid-column: 1;
+	grid-row: 1 / 3;
 	flex: 0 0 auto;
 	height: 38px;
 	width: 38px;
@@ -22,6 +27,7 @@
 	outline: none;
 	box-shadow: var(--shadow-hard-small);
 	object-fit: cover;
+	justify-self: start;
 }
 
 .work-image-wide {
@@ -34,54 +40,71 @@
 	background: #ffffff;
 }
 
-.work-wide-logo .work-subtitle {
-	padding-left: 106px;
-}
-
 .work-title {
+	grid-column: 2;
+	grid-row: 1;
 	font-size: 1rem;
 	font-weight: 900;
-	padding-left: 20px;
+	line-height: 1.08;
 	margin-top: 0;
 	color: var(--primary-color);
 	text-transform: uppercase;
+	min-width: 0;
 }
 
 .work-subtitle {
-	position: absolute;
+	grid-column: 2;
+	grid-row: 2;
 	font-size: 0.82rem;
 	font-weight: 700;
+	line-height: 1.3;
 	color: var(--secondary-color);
-	padding-top: 24px;
-	padding-left: 58px;
+	min-width: 0;
 }
 
 .work-duration {
-	position: absolute;
-	right: 0;
-	width: auto;
+	grid-column: 3;
+	grid-row: 1 / 3;
+	width: max-content;
 	padding: 6px 8px;
 	border: 2px solid var(--primary-color);
 	background: var(--accent-yellow);
 	font-size: 0.72rem;
 	font-weight: 900;
-	padding-top: 6px;
+	line-height: 1;
 	text-align: right;
 	color: var(--primary-color);
 }
 
 @media (max-width: 560px) {
 	.work {
-		padding-bottom: 46px;
+		grid-template-columns: 90px minmax(0, 1fr);
+		column-gap: 16px;
+		row-gap: 8px;
+		align-items: start;
+		padding-bottom: 34px;
+	}
+
+	.work-image-wide {
+		width: 82px;
+	}
+
+	.work-title {
+		font-size: 0.94rem;
+	}
+
+	.work-subtitle {
+		font-size: 0.78rem;
 	}
 
 	.work-duration {
-		left: 58px;
-		right: auto;
-		top: 50px;
+		grid-column: 2;
+		grid-row: 3;
+		margin-top: 4px;
+		text-align: left;
 	}
 
-	.work-wide-logo .work-duration {
-		left: 106px;
+	.work-image {
+		grid-row: 1 / 4;
 	}
 }
