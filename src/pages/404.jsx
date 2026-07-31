@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faFaceSadTear } from "@fortawesome/free-regular-svg-icons";
@@ -9,7 +10,6 @@ import CTAButton from "../components/common/CTAButton";
 
 import INFO from "../data/user";
 
-import "./styles/404.css";
 
 const Notfound = () => {
 	useEffect(() => {
@@ -18,6 +18,9 @@ const Notfound = () => {
 
 	return (
 		<React.Fragment>
+			<Head>
+				<title>{`404 | ${INFO.main.title}`}</title>
+			</Head>
 			<div className="not-found page-content">
 				<NavBar />
 				<div className="content-wrapper">
@@ -32,11 +35,10 @@ const Notfound = () => {
 								Oops! <FontAwesomeIcon icon={faFaceSadTear} />
 							</div>
 							<div className="not-found-message">
-								We can't seem to find the page you're looking
+								We can&apos;t seem to find the page you&apos;re looking
 								for.
 								<br />
-								The requested URL "{window.location.href}" was
-								not found on this server.
+								The requested URL was not found on this server.
 							</div>
 							<CTAButton to="/" className="not-found-link">
 								Go back to the home page

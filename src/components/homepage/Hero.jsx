@@ -10,7 +10,6 @@ import CTAButton from "../common/CTAButton";
 import Sticker from "../common/Sticker";
 import INFO from "../../data/user";
 
-import "./styles/hero.css";
 
 const Hero = () => {
 	return (

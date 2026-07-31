@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-import "./styles/achievementToast.css";
 
 const AchievementToast = ({
 	title = "Achievement unlocked",

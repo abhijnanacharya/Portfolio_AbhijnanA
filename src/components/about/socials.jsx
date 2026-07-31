@@ -8,7 +8,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import INFO from "../../data/user";
 
-import "./styles/socials.css";
 
 const Socials = () => {
 	return (
@@ -77,7 +76,7 @@ const Socials = () => {
 				>
 					<div className="social-icon">
 						<img
-							src="../leetcode.svg"
+							src="/leetcode.svg"
 							alt="Lc_Icon"
 							className="social-icon"
 						/>

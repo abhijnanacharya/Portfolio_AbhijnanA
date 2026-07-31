@@ -1,9 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-import "./styles/project.css";
 
 const Project = (props) => {
 	const { logo, title, description, linkText, link } = props;
@@ -11,7 +9,7 @@ const Project = (props) => {
 	return (
 		<React.Fragment>
 			<div className="project">
-				<Link to={link}>
+				<a href={link} target="_blank" rel="noreferrer">
 					<div className="project-container">
 						<div className="project-logo">
 							<img src={logo} alt="logo" />
@@ -26,7 +24,7 @@ const Project = (props) => {
 							<div className="project-link-text">{linkText}</div>
 						</div>
 					</div>
-				</Link>
+				</a>
 			</div>
 		</React.Fragment>
 	);

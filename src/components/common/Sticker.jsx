@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "./styles/sticker.css";
 
 const Sticker = ({
 	children,

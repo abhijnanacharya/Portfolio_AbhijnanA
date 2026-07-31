@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,6 @@ import Hero from "../components/homepage/Hero";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/homepage.css";
 import Loader from "../components/homepage/loader";
 
 const HOME_LOADER_SEEN_KEY = "portfolio-home-loader-seen";
@@ -25,6 +24,10 @@ const Homepage = () => {
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
 	const [loading, setLoading] = useState(() => {
+		if (typeof window === "undefined") {
+			return false;
+		}
+
 		return sessionStorage.getItem(HOME_LOADER_SEEN_KEY) !== "true";
 	});
 
@@ -87,14 +90,14 @@ const Homepage = () => {
 
 	return (
 		<React.Fragment>
-			<Helmet>
+			<Head>
 				<title>{INFO.main.title}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
 					content={currentSEO.keywords.join(", ")}
 				/>
-			</Helmet>
+			</Head>
 
 			<div className="page-content">
 				<NavBar active="home" showTicker />

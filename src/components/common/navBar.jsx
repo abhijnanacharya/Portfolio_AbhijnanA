@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import CTAButton from "./CTAButton";
 import INFO from "../../data/user";
 import StatusTicker from "./StatusTicker";
-import "./styles/navBar.css";
 
 const NavBar = (props) => {
 	const { active, showTicker = false } = props;
@@ -20,7 +19,7 @@ const NavBar = (props) => {
 	return (
 		<header className="site-header">
 			<nav className="navbar" aria-label="Primary navigation">
-				<Link to="/" className="nav-logo" aria-label="Go to homepage">
+				<Link href="/" className="nav-logo" aria-label="Go to homepage">
 					<span className="nav-logo-mark">AA</span>
 					<span className="nav-logo-text">{INFO.main.name}</span>
 				</Link>
@@ -33,7 +32,7 @@ const NavBar = (props) => {
 							}
 							key={link.id}
 						>
-							<Link to={link.to}>{link.label}</Link>
+							<Link href={link.to}>{link.label}</Link>
 						</li>
 					))}
 				</ul>

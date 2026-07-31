@@ -1,23 +1,20 @@
 import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
-import NavBar from "../components/common/navBar";
-import Footer from "../components/common/footer";
-import Logo from "../components/common/logo";
+import NavBar from "../../components/common/navBar";
+import Footer from "../../components/common/footer";
+import Logo from "../../components/common/logo";
 
-import INFO from "../data/user";
-import myArticles from "../data/articles";
+import INFO from "../../data/user";
+import myArticles from "../../data/articles";
 
-import "./styles/readArticle.css";
 
 let ArticleStyle = styled.div``;
 
-const ReadArticle = () => {
-	const navigate = useNavigate();
-	let { slug } = useParams();
-
+const ReadArticle = ({ slug }) => {
+	const router = useRouter();
 	const article = myArticles[slug - 1];
 
 	useEffect(() => {
@@ -25,16 +22,20 @@ const ReadArticle = () => {
 	}, [article]);
 
 	ArticleStyle = styled.div`
-		${article().style}
+		${article ? article().style : ""}
 	`;
+
+	if (!article) {
+		return null;
+	}
 
 	return (
 		<React.Fragment>
-			<Helmet>
+			<Head>
 				<title>{`${article().title} | ${INFO.main.title}`}</title>
 				<meta name="description" content={article().description} />
 				<meta name="keywords" content={article().keywords.join(", ")} />
-			</Helmet>
+			</Head>
 
 			<div className="page-content">
 				<NavBar />
@@ -49,10 +50,10 @@ const ReadArticle = () => {
 					<div className="read-article-container">
 						<div className="read-article-back">
 							<img
-								src="../back-button.png"
+								src="/back-button.png"
 								alt="back"
 								className="read-article-back-button"
-								onClick={() => navigate(-1)}
+								onClick={() => router.back()}
 							/>
 						</div>
 
@@ -79,6 +80,23 @@ const ReadArticle = () => {
 			</div>
 		</React.Fragment>
 	);
+};
+
+export const getStaticPaths = () => {
+	return {
+		paths: myArticles.map((_, index) => ({
+			params: { slug: (index + 1).toString() },
+		})),
+		fallback: false,
+	};
+};
+
+export const getStaticProps = ({ params }) => {
+	return {
+		props: {
+			slug: Number(params.slug),
+		},
+	};
 };
 
 export default ReadArticle;

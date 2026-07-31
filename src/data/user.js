@@ -3,7 +3,7 @@ const INFO = {
 		title: "Portfolio Abhijnan Acharya",
 		name: "Abhijnan Acharya",
 		email: "abhijnanacharya11@gmail.com",
-		logo: "../logo.png",
+		logo: "/logo.png",
 	},
 
 	socials: {
@@ -80,7 +80,7 @@ const INFO = {
 			title: "Fleet Management Service",
 			description:
 				"MVC based web-app written in NestJs to serve as a Fleet Management Service. Users can access the web-application to connect to their Databases and manage the drivers and keep a track of all the expenses using the analytic tab",
-			logo: "../nestjs.svg",
+			logo: "/nestjs.svg",
 			linkText: "View Project",
 			link: "https://github.com/abhijnanacharya/fms_backend",
 		},

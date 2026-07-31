@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -10,25 +10,27 @@ import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
-import "./styles/articles.css";
 
 const Articles = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "articles");
+	const currentSEO = SEO.find((item) => item.page === "articles") || {
+		description: INFO.articles.description,
+		keywords: ["Abhijnan Acharya", "Software Engineering", "Articles"],
+	};
 
 	return (
 		<React.Fragment>
-			<Helmet>
+			<Head>
 				<title>{`Articles | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
 					content={currentSEO.keywords.join(", ")}
 				/>
-			</Helmet>
+			</Head>
 
 			<div className="page-content">
 				<NavBar active="articles" />

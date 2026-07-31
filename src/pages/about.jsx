@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -10,7 +10,6 @@ import Sticker from "../components/common/Sticker";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/about.css";
 
 const About = () => {
 	useEffect(() => {
@@ -21,14 +20,14 @@ const About = () => {
 
 	return (
 		<React.Fragment>
-			<Helmet>
+			<Head>
 				<title>{`About | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
 					content={currentSEO.keywords.join(", ")}
 				/>
-			</Helmet>
+			</Head>
 
 			<div className="page-content">
 				<NavBar active="about" />
@@ -58,7 +57,7 @@ const About = () => {
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
-											src="about.jpeg"
+											src="/about.jpeg"
 											alt="about"
 											className="about-image"
 										/>

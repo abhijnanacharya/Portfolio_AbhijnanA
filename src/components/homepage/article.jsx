@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-import "./styles/article.css";
 
 const Article = (props) => {
 	const { title, description, date, link } = props;
@@ -21,7 +20,7 @@ const Article = (props) => {
 						{description}
 					</div>
 					<div className="homepage-article-link">
-						<Link to={link}>
+						<Link href={link}>
 							Read article{" "}
 							<FontAwesomeIcon
 								style={{ fontSize: "10px" }}

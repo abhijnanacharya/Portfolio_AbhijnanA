@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -9,7 +9,6 @@ import Socials from "../components/about/socials";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import "./styles/contact.css";
 
 const Contact = () => {
 	useEffect(() => {
@@ -20,14 +19,14 @@ const Contact = () => {
 
 	return (
 		<React.Fragment>
-			<Helmet>
+			<Head>
 				<title>{`Contact | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
 					content={currentSEO.keywords.join(", ")}
 				/>
-			</Helmet>
+			</Head>
 
 			<div className="page-content">
 				<NavBar active="contact" />
@@ -41,7 +40,7 @@ const Contact = () => {
 					<div className="contact-container">
 						<div className="section-label">Signal Channel</div>
 						<div className="title contact-title">
-							Let's Get in Touch: Ways to Connect with Me
+							Let&apos;s Get in Touch: Ways to Connect with Me
 						</div>
 
 						<div className="subtitle contact-subtitle">

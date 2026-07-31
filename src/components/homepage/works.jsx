@@ -3,7 +3,6 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../common/card";
 
-import "./styles/works.css";
 
 const Works = () => {
 	return (
@@ -54,7 +53,7 @@ const Works = () => {
 
 						<div className="work">
 							<img
-								src="../skill-lync.png"
+								src="/skill-lync.png"
 								alt="skill-lync"
 								className="work-image"
 							/>

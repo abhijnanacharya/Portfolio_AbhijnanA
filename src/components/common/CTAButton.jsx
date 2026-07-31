@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-import "./styles/ctaButton.css";
 
 const CTAButton = ({
 	to,
@@ -24,7 +23,7 @@ const CTAButton = ({
 
 	if (to) {
 		return (
-			<Link to={to} className={classes} {...rest}>
+			<Link href={to} className={classes} {...rest}>
 				{content}
 			</Link>
 		);
