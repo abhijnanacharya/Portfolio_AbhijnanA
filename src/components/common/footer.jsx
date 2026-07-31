@@ -29,7 +29,7 @@ const Footer = () => {
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						© 2025 Abhijnan Acharya. All Rights Reserved.
+						© 2026 Abhijnan Acharya. All Rights Reserved.
 					</div>
 				</div>
 			</div>

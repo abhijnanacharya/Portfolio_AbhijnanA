@@ -1,0 +1,40 @@
+@import "../../../data/styles.css";
+
+.cta-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	min-height: 46px;
+	padding: 12px 18px;
+	border: var(--border-strong);
+	border-radius: 6px;
+	box-shadow: var(--shadow-hard);
+	color: var(--primary-color);
+	font-size: 0.88rem;
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	transition:
+		transform 150ms ease,
+		box-shadow 150ms ease,
+		background-color 150ms ease;
+}
+
+.cta-button-primary {
+	background: var(--accent-yellow);
+}
+
+.cta-button-secondary {
+	background: var(--surface-color);
+}
+
+.cta-button:hover {
+	transform: translate(3px, 3px);
+	box-shadow: 2px 2px 0 #111111;
+}
+
+.cta-button svg {
+	width: 0.9em;
+}

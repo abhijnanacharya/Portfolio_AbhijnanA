@@ -1,14 +1,14 @@
 @import "../../data/styles.css";
 
 .homepage-logo-container {
-	display: flex;
+	display: none;
 	justify-content: left;
 	align-items: center;
 	padding-top: 130px;
 }
 
 .homepage-container {
-	padding-top: 25px;
+	padding-top: 0;
 }
 
 .homepage-first-area {
@@ -74,29 +74,40 @@
 
 .homepage-socials {
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	align-items: center;
-	padding-top: 30px;
+	gap: 12px;
+	padding-top: 8px;
+	padding-bottom: 40px;
 }
 
 .homepage-social-icon {
-	padding-right: 20px;
-	font-size: 25px;
+	display: inline-flex;
+	width: 44px;
+	height: 44px;
+	padding: 10px;
+	border: var(--border-thin);
+	background: var(--surface-color);
+	box-shadow: var(--shadow-hard-small);
+	font-size: 20px;
 	transition: color 0.2s ease-in-out;
-	color: var(--secondary-color);
+	color: var(--primary-color);
 }
 
 .homepage-social-icon:hover {
-	color: var(--primary-color);
+	color: var(--accent-coral);
+	transform: translate(2px, 2px);
+	box-shadow: 1px 1px 0 #111111;
 }
 
 .homepage-after-title {
 	display: flex;
+	padding-bottom: 48px;
 }
 
 .homepage-projects {
-	flex-basis: 300px;
-	padding-top: 40px;
+	padding-top: 42px;
+	border-top: var(--border-strong);
 }
 
 .homepage-articles {
@@ -110,7 +121,7 @@
 }
 
 .homepage-works {
-	flex-basis: 600px;
+	width: 100%;
 	padding-top: 30px;
 }
 
@@ -170,7 +181,7 @@
 
 	.homepage-works {
 		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }

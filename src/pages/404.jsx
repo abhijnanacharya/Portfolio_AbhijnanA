@@ -5,6 +5,7 @@ import { faFaceSadTear } from "@fortawesome/free-regular-svg-icons";
 
 import NavBar from "../components/common/navBar";
 import Logo from "../components/common/logo";
+import CTAButton from "../components/common/CTAButton";
 
 import INFO from "../data/user";
 
@@ -37,9 +38,9 @@ const Notfound = () => {
 								The requested URL "{window.location.href}" was
 								not found on this server.
 							</div>
-							<a href="/" className="not-found-link">
+							<CTAButton to="/" className="not-found-link">
 								Go back to the home page
-							</a>
+							</CTAButton>
 						</div>
 					</div>
 				</div>

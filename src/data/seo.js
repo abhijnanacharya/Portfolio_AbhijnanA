@@ -2,8 +2,15 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a skilled full-stack developer specializing in C++, Node.js, ReactJs, Python, Kubernetes, and Docker. Currently pursuing a Master's in Computer Science at the Illinois Institute of Technology, I bring hands-on experience in constructing scalable, secure, and dependable web applications using diverse frameworks and technologies. My enthusiasm lies in tackling intricate problems and continuously acquiring new skills. Committed to crafting high-quality code adhering to best practices and industry standards, I am actively seeking fresh challenges and opportunities to further my development expertise.",
-		keywords: ["Abhijnan", "Abhijnan A", "Abhijnan Acharya"],
+			"Abhijnan Acharya is a software engineer at Microsoft Xbox Ads building full-stack systems, backend services, cloud infrastructure, and AI-powered developer tools.",
+		keywords: [
+			"Abhijnan",
+			"Abhijnan Acharya",
+			"Microsoft Xbox Ads",
+			"Software Engineer",
+			"Full-Stack Engineer",
+			"AI Developer Tools",
+		],
 	},
 
 	{

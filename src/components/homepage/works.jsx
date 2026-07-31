@@ -13,10 +13,36 @@ const Works = () => {
 				title="Work and Internship"
 				body={
 					<div className="works-body">
+						<div className="work work-wide-logo">
+							<img
+								src="https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png"
+								alt="MSFT"
+								className="work-image work-image-wide"
+							/>
+							<div className="work-title">Microsoft XBOX</div>
+							<div className="work-subtitle">
+								Software Engineer
+							</div>
+							<div className="work-duration">2026 - Present</div>
+						</div>
+
+						<div className="work work-wide-logo">
+							<img
+								src="https://gosachi.com/wp-content/uploads/2024/06/sachi_logo.svg"
+								alt="GoSachi"
+								className="work-image work-image-wide work-image-gosachi"
+							/>
+							<div className="work-title">Sachi</div>
+							<div className="work-subtitle">
+								Founding Software Engineer
+							</div>
+							<div className="work-duration">2025 - 2026</div>
+						</div>
+
 						<div className="work">
 							<img
 								src="https://sapphirestudios.co/wp-content/uploads/2023/09/cropped-favicon-270x270.png"
-								alt="Sapphire Apps Studio"
+								alt="Sapphire Apps"
 								className="work-image"
 							/>
 							<div className="work-title">Sapphire Apps</div>

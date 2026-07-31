@@ -4,7 +4,7 @@
 }
 
 .notfound-logo-container {
-	display: flex;
+	display: none;
 	justify-content: left;
 	padding-top: 25px;
 }
@@ -36,37 +36,37 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	width: min(90vw, 760px);
+	padding: 36px;
+	border: var(--border-strong);
+	border-radius: 8px;
+	background: var(--surface-color);
+	box-shadow: var(--shadow-hard);
 }
 
 .notfound-title {
 	font-family: var(--secondary-font);
 	color: var(--primary-color);
-	font-size: 80px;
+	font-size: clamp(3rem, 8vw, 6rem);
 	padding-top: 15px;
-	font-weight: 700;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .not-found-message {
 	color: var(--secondary-color);
-	font-size: 2rem;
+	font-size: clamp(1rem, 2.2vw, 1.5rem);
+	font-weight: 700;
 	margin: 2rem 0;
 	text-align: center;
 }
 
 .not-found-link {
-	font-size: 1.5rem;
-	text-decoration: none;
-	color: #fff;
-	background-color: var(--link-color);
-	padding: 1rem 2rem;
-	border-radius: 50px;
-	transition: all 0.3s ease-in-out;
+	font-size: 0.9rem;
 }
 
 .not-found-link:hover {
-	background-color: #fff;
-	color: var(--link-color);
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	background-color: var(--accent-yellow);
 }
 
 @media (max-width: 500px) {
@@ -76,6 +76,7 @@
 		left: auto;
 		width: 100%;
 		transform: none;
+		padding: 22px;
 	}
 
 	.notfound-title {
@@ -92,6 +93,5 @@
 
 	.not-found-link {
 		font-size: 15px;
-		padding: 15px 15px;
 	}
 }

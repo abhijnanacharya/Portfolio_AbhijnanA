@@ -1,3 +1,5 @@
+@import "../../../data/styles.css";
+
 .socket {
 	width: 200px;
 	height: 200px;
@@ -9,7 +11,7 @@
 }
 
 .hex-brick {
-	background: #000000;
+	background: var(--primary-color);
 	width: 30px;
 	height: 17px;
 	position: absolute;
@@ -20,6 +22,10 @@
 	-webkit-animation-name: fade00;
 	-webkit-animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
+}
+
+.socket {
+	filter: drop-shadow(4px 4px 0 #ffd84d);
 }
 
 .h2 {

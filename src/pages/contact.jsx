@@ -39,6 +39,7 @@ const Contact = () => {
 					</div>
 
 					<div className="contact-container">
+						<div className="section-label">Signal Channel</div>
 						<div className="title contact-title">
 							Let's Get in Touch: Ways to Connect with Me
 						</div>

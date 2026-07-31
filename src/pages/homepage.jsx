@@ -10,6 +10,7 @@ import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
+import Hero from "../components/homepage/Hero";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
@@ -17,11 +18,15 @@ import SEO from "../data/seo";
 import "./styles/homepage.css";
 import Loader from "../components/homepage/loader";
 
+const HOME_LOADER_SEEN_KEY = "portfolio-home-loader-seen";
+
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(() => {
+		return sessionStorage.getItem(HOME_LOADER_SEEN_KEY) !== "true";
+	});
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -52,12 +57,17 @@ const Homepage = () => {
 	}, [logoSize, oldLogoSize]);
 
 	useEffect(() => {
+		if (!loading) {
+			return;
+		}
+
 		const timer = setTimeout(() => {
+			sessionStorage.setItem(HOME_LOADER_SEEN_KEY, "true");
 			setLoading(false);
 		}, 980);
 
 		return () => clearTimeout(timer);
-	}, []);
+	}, [loading]);
 
 	const currentSEO = SEO.find((item) => item.page === "home");
 
@@ -87,7 +97,7 @@ const Homepage = () => {
 			</Helmet>
 
 			<div className="page-content">
-				<NavBar active="home" />
+				<NavBar active="home" showTicker />
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
 						<div style={logoStyle}>
@@ -96,29 +106,7 @@ const Homepage = () => {
 					</div>
 
 					<div className="homepage-container">
-						<div className="homepage-first-area">
-							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.title}
-								</div>
-
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
-								</div>
-							</div>
-
-							<div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
-									</div>
-								</div>
-							</div>
-						</div>
+						<Hero />
 
 						<div className="homepage-socials">
 							<a
@@ -154,6 +142,7 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects">
+							<div className="section-label">Selected Builds</div>
 							<AllProjects />
 						</div>
 

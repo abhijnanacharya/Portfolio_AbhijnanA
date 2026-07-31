@@ -1,14 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap");
 @import "./data/styles.css";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: var(--background-color);
+	scroll-behavior: smooth;
+}
 
 body {
 	margin: 0;
 	font-family: var(--primary-font);
+	background-color: var(--background-color);
+	color: var(--primary-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 3px solid var(--accent-purple);
+	outline-offset: 4px;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
 }

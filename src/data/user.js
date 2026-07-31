@@ -2,7 +2,7 @@ const INFO = {
 	main: {
 		title: "Portfolio Abhijnan Acharya",
 		name: "Abhijnan Acharya",
-		email: "aacharya3@hawk.illinoistech.edu",
+		email: "abhijnanacharya11@gmail.com",
 		logo: "../logo.png",
 	},
 
@@ -16,13 +16,13 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Abhijnan Acharya: Full-Stack Engineer, ML Enthusiast, and Guitarist",
+		title: "Abhijnan Acharya: Software Engineer at Microsoft Xbox Ads",
 		description:
-			"I am a skilled full-stack developer specializing in Node.js, ReactJs, Python, Kubernetes, and Docker. Currently pursuing a Master's in Computer Science at the Illinois Institute of Technology, I bring hands-on experience in constructing scalable, secure, and dependable web applications using diverse frameworks and technologies. My enthusiasm lies in tackling intricate problems and continuously acquiring new skills. Committed to crafting high-quality code adhering to best practices and industry standards, I am actively seeking fresh challenges and opportunities to further my development expertise.",
+			"I am a software engineer working at Microsoft Xbox Ads, building reliable systems across full-stack product surfaces, backend services, data-informed workflows, and AI-powered developer tools. My work sits at the intersection of scalable engineering, product execution, and practical automation, with hands-on experience across Node.js, React, Python, Kubernetes, Docker, and cloud-native infrastructure.",
 	},
 
 	about: {
-		title: "Designing tomorrow from Chicago, USA – I'm Abhijnan Acharya, unleashing innovation today..",
+		title: "Designing tomorrow from San Francisco, USA – I'm Abhijnan Acharya, unleashing innovation today..",
 		description:
 			"Throughout my journey, I've contributed to a diverse range of projects, achieving significant milestones along the way. Proudly open-sourcing many of them, I invite you to explore and contribute. Your suggestions for improvements or enhancements are not just welcome but encouraged. Collaborating with fellow enthusiasts is an invaluable avenue for mutual learning and growth. I am ever-ready for fresh ideas and constructive feedback – let's build something remarkable together.",
 	},

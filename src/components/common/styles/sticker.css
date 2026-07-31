@@ -1,0 +1,40 @@
+@import "../../../data/styles.css";
+
+.sticker {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	width: fit-content;
+	padding: 8px 11px;
+	border: var(--border-thin);
+	border-radius: 4px;
+	box-shadow: var(--shadow-hard-small);
+	color: var(--primary-color);
+	font-size: 0.76rem;
+	font-weight: 900;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	transform: rotate(-3deg);
+	transition: transform 160ms ease;
+}
+
+.sticker:hover {
+	transform: rotate(2deg) translateY(-2px);
+}
+
+.sticker-yellow {
+	background: var(--accent-yellow);
+}
+
+.sticker-coral {
+	background: var(--accent-coral);
+}
+
+.sticker-purple {
+	background: var(--accent-purple);
+}
+
+.sticker-blue {
+	background: var(--accent-blue);
+}

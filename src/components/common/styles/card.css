@@ -2,13 +2,14 @@
 
 .card {
 	mix-blend-mode: normal;
-	border-radius: 20px;
-	outline: 2px solid #f4f4f5;
+	border: var(--border-strong);
+	border-radius: 8px;
+	background: var(--surface-color);
+	box-shadow: var(--shadow-hard);
 }
 
 .card-container {
-	padding: 30px;
-	padding-bottom: 5px;
+	padding: 24px;
 }
 
 .card-header {
@@ -17,18 +18,26 @@
 }
 
 .card-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border: var(--border-thin);
+	background: var(--accent-purple);
 	font-size: 15px;
-	color: var(--tertiary-color);
+	color: var(--primary-color);
 }
 
 .card-title {
-	color: var(--secondary-color);
-	font-size: 14px;
-	padding-left: 20px;
-	font-weight: 650;
+	color: var(--primary-color);
+	font-size: 0.9rem;
+	padding-left: 14px;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .card-body {
-	padding-top: 40px;
+	padding-top: 28px;
 	font-size: 15px;
 }

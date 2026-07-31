@@ -38,6 +38,7 @@ const Projects = () => {
 						</div>
 					</div>
 					<div className="projects-container">
+						<div className="section-label">Build Log</div>
 						<div className="title projects-title">
 							Crafting ripples in the cosmos, here are the
 							artifacts of my journey.
