@@ -1,0 +1,129 @@
+@import "../../../data/styles.css";
+
+.achievement-toast {
+	position: fixed;
+	right: 28px;
+	bottom: 28px;
+	z-index: 1200;
+	display: grid;
+	grid-template-columns: 150px minmax(0, 1fr) auto;
+	gap: 14px;
+	align-items: center;
+	width: min(560px, calc(100vw - 36px));
+	padding: 14px;
+	border: var(--border-strong);
+	border-radius: 8px;
+	background: var(--primary-color);
+	box-shadow: 6px 6px 0 var(--accent-yellow);
+	color: var(--background-color);
+	animation: achievement-enter 240ms ease-out;
+}
+
+.achievement-toast-leaving {
+	animation: achievement-exit 220ms ease-in forwards;
+}
+
+.achievement-toast-art {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 52px;
+	overflow: hidden;
+	background: #000000;
+}
+
+.achievement-toast-art img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.achievement-toast-copy {
+	min-width: 0;
+}
+
+.achievement-toast-title {
+	display: inline-flex;
+	margin-bottom: 6px;
+	padding: 5px 8px;
+	border: 2px solid var(--background-color);
+	background: var(--accent-coral);
+	color: var(--primary-color);
+	font-size: 0.68rem;
+	font-weight: 900;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.achievement-toast-message {
+	color: var(--background-color);
+	font-size: 0.96rem;
+	font-weight: 900;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.achievement-toast-close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	border: 2px solid var(--background-color);
+	border-radius: 4px;
+	background: var(--surface-color);
+	color: var(--primary-color);
+	cursor: pointer;
+}
+
+.achievement-toast-close:hover {
+	background: var(--accent-purple);
+}
+
+@keyframes achievement-enter {
+	from {
+		opacity: 0;
+		transform: translate(18px, 18px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes achievement-exit {
+	from {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	to {
+		opacity: 0;
+		transform: translate(18px, 18px);
+	}
+}
+
+@media (max-width: 620px) {
+	.achievement-toast {
+		grid-template-columns: minmax(0, 1fr) auto;
+		right: 18px;
+		left: 18px;
+		bottom: 18px;
+		width: auto;
+	}
+
+	.achievement-toast-art {
+		grid-column: 1 / -1;
+		width: 100%;
+		height: 56px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.achievement-toast,
+	.achievement-toast-leaving {
+		animation: none;
+	}
+}
