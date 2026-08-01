@@ -16,6 +16,8 @@ const Works = () => {
 								src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/960px-Microsoft_logo.svg.png?_=20210729021049"
 								alt="MSFT"
 								className="work-image work-image-wide"
+								loading="lazy"
+								decoding="async"
 							/>
 							<div className="work-title">Microsoft XBOX</div>
 							<div className="work-subtitle">
@@ -29,6 +31,8 @@ const Works = () => {
 								src="https://gosachi.com/wp-content/uploads/2024/06/sachi_logo.svg"
 								alt="GoSachi"
 								className="work-image work-image-wide work-image-gosachi"
+								loading="lazy"
+								decoding="async"
 							/>
 							<div className="work-title">Sachi</div>
 							<div className="work-subtitle">
@@ -42,6 +46,8 @@ const Works = () => {
 								src="https://sapphirestudios.co/wp-content/uploads/2023/09/cropped-favicon-270x270.png"
 								alt="Sapphire Apps"
 								className="work-image"
+								loading="lazy"
+								decoding="async"
 							/>
 							<div className="work-title">Sapphire Apps</div>
 							<div className="work-subtitle">
@@ -55,6 +61,8 @@ const Works = () => {
 								src="/skill-lync.png"
 								alt="skill-lync"
 								className="work-image"
+								loading="lazy"
+								decoding="async"
 							/>
 							<div className="work-title">Skill-Lync</div>
 							<div className="work-subtitle">
@@ -68,6 +76,8 @@ const Works = () => {
 								src="https://upload.wikimedia.org/wikipedia/commons/d/de/Amazon_icon.png"
 								alt="amazn"
 								className="work-image"
+								loading="lazy"
+								decoding="async"
 							/>
 							<div className="work-title">Amazon</div>
 							<div className="work-subtitle">

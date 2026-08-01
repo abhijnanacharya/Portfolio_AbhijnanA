@@ -18,7 +18,7 @@
 	/* ---------------------- */
 
 	/* ------- fonts ------- */
-	--primary-font: "Inter", "Helvetica Neue", Arial, sans-serif;
-	--secondary-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+	--primary-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--secondary-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	/* --------------------- */
 }

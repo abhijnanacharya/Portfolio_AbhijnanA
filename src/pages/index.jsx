@@ -15,24 +15,13 @@ import Hero from "../components/homepage/Hero";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import Loader from "../components/homepage/loader";
-
-const HOME_LOADER_SEEN_KEY = "portfolio-home-loader-seen";
-
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
-	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, []);
-
-	useEffect(() => {
-		if (sessionStorage.getItem(HOME_LOADER_SEEN_KEY) !== "true") {
-			setLoading(true);
-		}
 	}, []);
 
 	useEffect(() => {
@@ -59,19 +48,6 @@ const Homepage = () => {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [logoSize, oldLogoSize]);
 
-	useEffect(() => {
-		if (!loading) {
-			return;
-		}
-
-		const timer = setTimeout(() => {
-			sessionStorage.setItem(HOME_LOADER_SEEN_KEY, "true");
-			setLoading(false);
-		}, 980);
-
-		return () => clearTimeout(timer);
-	}, [loading]);
-
 	const currentSEO = SEO.find((item) => item.page === "home");
 
 	const logoStyle = {
@@ -83,10 +59,6 @@ const Homepage = () => {
 		borderRadius: stayLogo ? "50%" : "none",
 		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
 	};
-
-	if (loading) {
-		return <Loader />;
-	}
 
 	return (
 		<React.Fragment>

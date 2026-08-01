@@ -60,6 +60,9 @@ const About = () => {
 											src="/about.jpeg"
 											alt="about"
 											className="about-image"
+											width="1024"
+											height="1024"
+											decoding="async"
 										/>
 									</div>
 								</div>

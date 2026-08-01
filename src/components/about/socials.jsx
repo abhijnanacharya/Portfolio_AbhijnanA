@@ -79,6 +79,8 @@ const Socials = () => {
 							src="/leetcode.svg"
 							alt="Lc_Icon"
 							className="social-icon"
+							loading="lazy"
+							decoding="async"
 						/>
 					</div>
 					<div className="social-text">Follow on Leetcode</div>

@@ -1,13 +1,22 @@
 import { useEffect } from "react";
 import Head from "next/head";
-import ReactGA from "react-ga4";
-import posthog from "posthog-js";
+import dynamic from "next/dynamic";
 
 import { TRACKING_ID } from "../data/tracking";
-import CommandPalette from "../components/common/CommandPalette";
 import MobileQuickActions from "../components/common/MobileQuickActions";
-import SecretConsoleMessage from "../components/common/SecretConsoleMessage";
-import TerminalOverlay from "../components/common/TerminalOverlay";
+
+const CommandPalette = dynamic(
+	() => import("../components/common/CommandPalette"),
+	{ ssr: false },
+);
+const SecretConsoleMessage = dynamic(
+	() => import("../components/common/SecretConsoleMessage"),
+	{ ssr: false },
+);
+const TerminalOverlay = dynamic(
+	() => import("../components/common/TerminalOverlay"),
+	{ ssr: false },
+);
 
 import "../index.css";
 import "../app.css";
@@ -34,7 +43,6 @@ import "../components/common/styles/sticker.css";
 import "../components/common/styles/terminalOverlay.css";
 import "../components/homepage/styles/article.css";
 import "../components/homepage/styles/hero.css";
-import "../components/homepage/styles/loader.css";
 import "../components/homepage/styles/works.css";
 import "../components/projects/styles/allProjects.css";
 import "../components/projects/styles/project.css";
@@ -42,14 +50,18 @@ import "../components/projects/styles/project.css";
 const App = ({ Component, pageProps }) => {
 	useEffect(() => {
 		if (TRACKING_ID !== "") {
-			ReactGA.initialize(TRACKING_ID);
+			import("react-ga4").then(({ default: ReactGA }) => {
+				ReactGA.initialize(TRACKING_ID);
+			});
 		}
 
 		if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
-			posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
-				api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-				autocapture: true,
-				capture_pageview: true,
+			import("posthog-js").then(({ default: posthog }) => {
+				posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
+					api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+					autocapture: true,
+					capture_pageview: true,
+				});
 			});
 		}
 	}, []);

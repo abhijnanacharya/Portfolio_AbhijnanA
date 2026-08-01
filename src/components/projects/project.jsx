@@ -12,7 +12,7 @@ const Project = (props) => {
 				<a href={link} target="_blank" rel="noreferrer">
 					<div className="project-container">
 						<div className="project-logo">
-							<img src={logo} alt="logo" />
+							<img src={logo} alt="logo" loading="lazy" decoding="async" />
 						</div>
 						<div className="project-title">{title}</div>
 						<div className="project-description">{description}</div>
