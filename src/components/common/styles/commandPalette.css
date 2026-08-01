@@ -51,7 +51,7 @@
 .command-palette-layer {
 	position: fixed;
 	inset: 0;
-	z-index: 1000;
+	z-index: 4000;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -61,6 +61,7 @@
 .command-palette-backdrop {
 	position: absolute;
 	inset: 0;
+	z-index: 0;
 	border: 0;
 	background: rgba(17, 17, 17, 0.62);
 	cursor: pointer;
@@ -68,7 +69,7 @@
 
 .command-palette {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	width: min(100%, 720px);
 	max-height: min(760px, 82vh);
 	display: flex;
@@ -295,7 +296,7 @@
 	position: fixed;
 	right: 18px;
 	bottom: 76px;
-	z-index: 1001;
+	z-index: 4001;
 	max-width: min(320px, calc(100vw - 36px));
 	padding: 10px 12px;
 	border: var(--border-thin);
@@ -315,21 +316,42 @@
 	}
 
 	.command-palette-layer {
-		align-items: flex-start;
-		padding: 72px 12px 16px;
+		align-items: stretch;
+		padding: 12px;
 	}
 
 	.command-palette {
-		max-height: calc(100vh - 88px);
+		width: 100%;
+		max-height: none;
+		height: calc(100vh - 24px);
+		height: calc(100svh - 24px);
+		height: calc(100dvh - 24px);
 		box-shadow: 5px 5px 0 var(--accent-yellow);
 	}
 
 	.command-palette-header {
-		padding: 16px;
+		position: sticky;
+		top: 0;
+		z-index: 3;
+		flex: 0 0 auto;
+		align-items: center;
+		padding: 14px;
+	}
+
+	.command-palette h2 {
+		font-size: clamp(1.85rem, 9vw, 2.55rem);
+		line-height: 0.88;
+	}
+
+	.command-palette-close {
+		width: 44px;
+		height: 44px;
 	}
 
 	.command-palette-search {
+		flex: 0 0 auto;
 		margin: 14px 16px;
+		box-shadow: 3px 3px 0 var(--accent-purple);
 	}
 
 	.command-palette-results {
@@ -386,6 +408,10 @@
 	}
 
 	.command-palette-footer {
+		position: sticky;
+		bottom: 0;
+		z-index: 3;
+		flex: 0 0 auto;
 		padding: 12px 16px;
 	}
 }

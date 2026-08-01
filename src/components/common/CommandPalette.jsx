@@ -150,6 +150,7 @@ const CommandPalette = () => {
 	}, [commands, query]);
 
 	useEffect(() => {
+		const handleOpenCommandPalette = () => setIsOpen(true);
 		const handleKeyDown = (event) => {
 			const isMacShortcut = event.metaKey && event.key.toLowerCase() === "k";
 			const isWindowsShortcut = event.ctrlKey && event.key.toLowerCase() === "k";
@@ -160,9 +161,19 @@ const CommandPalette = () => {
 			}
 		};
 
+		window.addEventListener(
+			"portfolio:open-command-palette",
+			handleOpenCommandPalette
+		);
 		window.addEventListener("keydown", handleKeyDown);
 
-		return () => window.removeEventListener("keydown", handleKeyDown);
+		return () => {
+			window.removeEventListener(
+				"portfolio:open-command-palette",
+				handleOpenCommandPalette
+			);
+			window.removeEventListener("keydown", handleKeyDown);
+		};
 	}, []);
 
 	useEffect(() => {

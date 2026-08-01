@@ -5,6 +5,7 @@ import posthog from "posthog-js";
 
 import { TRACKING_ID } from "../data/tracking";
 import CommandPalette from "../components/common/CommandPalette";
+import SecretConsoleMessage from "../components/common/SecretConsoleMessage";
 import TerminalOverlay from "../components/common/TerminalOverlay";
 
 import "../index.css";
@@ -57,6 +58,7 @@ const App = ({ Component, pageProps }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<CommandPalette />
+			<SecretConsoleMessage />
 			<TerminalOverlay />
 			<Component {...pageProps} />
 		</>
