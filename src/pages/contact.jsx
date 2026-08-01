@@ -64,6 +64,90 @@ const Contact = () => {
 							hearing from you! Thanks again for your interest,
 							and I look forward to hearing from you!
 						</div>
+
+						<form
+							name="interest"
+							method="POST"
+							action="/thank-you/"
+							data-netlify="true"
+							netlify-honeypot="bot-field"
+							className="interest-form"
+						>
+							<input type="hidden" name="form-name" value="interest" />
+							<p className="form-hidden">
+								<label>
+									Don&apos;t fill this out if you&apos;re human:
+									<input name="bot-field" />
+								</label>
+							</p>
+
+							<div className="interest-form-header">
+								<div className="section-label">Interest Form</div>
+								<p>
+									Share a little context and I&apos;ll follow up by email.
+								</p>
+							</div>
+
+							<div className="form-grid">
+								<label className="form-field">
+									<span>Name</span>
+									<input
+										type="text"
+										name="name"
+										autoComplete="name"
+										required
+									/>
+								</label>
+
+								<label className="form-field">
+									<span>Email</span>
+									<input
+										type="email"
+										name="email"
+										autoComplete="email"
+										required
+									/>
+								</label>
+
+								<label className="form-field">
+									<span>Interest</span>
+									<select name="interestType" required defaultValue="">
+										<option value="" disabled>
+											Select one
+										</option>
+										<option value="collaboration">Collaboration</option>
+										<option value="consulting">Consulting</option>
+										<option value="startup">Startup / product idea</option>
+										<option value="speaking">Speaking / writing</option>
+										<option value="other">Other</option>
+									</select>
+								</label>
+
+								<label className="form-field">
+									<span>Timeline</span>
+									<select name="timeline" defaultValue="">
+										<option value="">Flexible</option>
+										<option value="now">Now</option>
+										<option value="1-3-months">1-3 months</option>
+										<option value="later">Later</option>
+									</select>
+								</label>
+							</div>
+
+							<label className="form-field form-field-full">
+								<span>Message</span>
+								<textarea
+									name="message"
+									rows="6"
+									placeholder="What are you building, hiring for, or curious about?"
+									required
+								/>
+							</label>
+
+							<button className="form-submit" type="submit">
+								Send Signal
+							</button>
+						</form>
 					</div>
 
 					<div className="socials-container">
