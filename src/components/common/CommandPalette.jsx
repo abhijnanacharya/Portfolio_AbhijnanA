@@ -36,7 +36,7 @@ const CommandPalette = () => {
 			{
 				id: "home",
 				label: "Go Home",
-				description: "Rollback to the main build surface",
+				description: "Return to the main surface",
 				group: "Navigation",
 				icon: faHouse,
 				keywords: "index landing hero",
@@ -45,7 +45,7 @@ const CommandPalette = () => {
 			{
 				id: "projects",
 				label: "Open Projects",
-				description: "Inspect shipped work and experiments",
+				description: "View proof of build",
 				group: "Navigation",
 				icon: faLayerGroup,
 				keywords: "portfolio work build log",
@@ -54,7 +54,7 @@ const CommandPalette = () => {
 			{
 				id: "articles",
 				label: "Open Articles",
-				description: "Read notes, essays, and write-ups",
+				description: "Read engineering notes",
 				group: "Navigation",
 				icon: faNewspaper,
 				keywords: "blog writing cms posts",
@@ -63,7 +63,7 @@ const CommandPalette = () => {
 			{
 				id: "about",
 				label: "Open About",
-				description: "Read the operator profile",
+				description: "View profile",
 				group: "Navigation",
 				icon: faAddressCard,
 				keywords: "bio experience profile",
@@ -72,7 +72,7 @@ const CommandPalette = () => {
 			{
 				id: "contact",
 				label: "Open Contact",
-				description: "Start a conversation",
+				description: "Start the conversation",
 				group: "Navigation",
 				icon: faEnvelope,
 				keywords: "hire email form interest",
@@ -95,7 +95,7 @@ const CommandPalette = () => {
 			{
 				id: "terminal",
 				label: "Open Terminal",
-				description: "Launch the hidden developer shell",
+				description: "Launch portfolio shell",
 				group: "Actions",
 				icon: faTerminal,
 				keywords: "shell console backtick tilde easter egg",

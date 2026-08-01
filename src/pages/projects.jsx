@@ -60,23 +60,13 @@ const Projects = () => {
 					<div className="projects-container">
 						<div className="section-label">Build Log</div>
 						<div className="title projects-title">
-							Crafting ripples in the cosmos, here are the
-							artifacts of my journey.
+							Proof of build.
 						</div>
 
 						<div className="subtitle projects-subtitle">
-							Venturing into a vibrant mix of projects has been an
-							exhilarating ride, and I&apos;m beaming with pride at the
-							strides we&apos;ve made. Among the many adventures,
-							there&apos;s a collection of open-source gems, inviting
-							curious minds to dive in and contribute their flair.
-							Your creativity and ideas for spicing things up are
-							not just welcomed but eagerly encouraged. Let&apos;s
-							embark on this collaborative journey of perpetual
-							learning and growth together. It&apos;s not just about
-							the code; it&apos;s about building something awesome and
-							having a blast while doing it. Join the fun, and
-							let&apos;s create something extraordinary!
+							A focused set of systems, AI tools, backend services,
+							and algorithmic projects. Each one tests architecture,
+							execution, and product judgment.
 						</div>
 
 						<div className="projects-list">

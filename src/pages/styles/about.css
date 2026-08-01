@@ -15,10 +15,19 @@
 
 .about-container {
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 	height: 100%;
 	margin: 0;
 	padding-top: 84px;
+}
+
+@media (min-width: 1025px) and (min-height: 860px) {
+	.about-container {
+		justify-content: center;
+		padding-top: 32px;
+		padding-bottom: 48px;
+	}
 }
 
 .about-main {

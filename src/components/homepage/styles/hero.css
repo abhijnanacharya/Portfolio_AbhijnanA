@@ -3,7 +3,7 @@
 .hero-section {
 	position: relative;
 	display: grid;
-	grid-template-columns: 160px minmax(0, 1fr) 160px;
+	grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr) minmax(220px, 0.36fr);
 	align-items: center;
 	min-height: calc(100vh - 170px);
 	padding: 64px 0 54px;
@@ -82,12 +82,12 @@
 
 .hero-decor-left {
 	align-items: flex-start;
-	transform: translateY(-28px);
+	transform: translate(-34px, -28px);
 }
 
 .hero-decor-right {
 	align-items: flex-end;
-	transform: translateY(42px);
+	transform: translate(34px, 42px);
 }
 
 .hero-mini-sticker {
@@ -101,6 +101,20 @@
 	}
 	50% {
 		transform: rotate(1deg) translateY(-8px);
+	}
+}
+
+@media (max-width: 1180px) {
+	.hero-section {
+		grid-template-columns: 150px minmax(0, 1fr) 150px;
+	}
+
+	.hero-decor-left {
+		transform: translate(-12px, -28px);
+	}
+
+	.hero-decor-right {
+		transform: translate(12px, 42px);
 	}
 }
 

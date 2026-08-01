@@ -47,22 +47,22 @@ const TerminalOverlay = () => {
 					createLine(INFO.main.name, "ok"),
 					createLine("Software Engineer at Microsoft Xbox Ads"),
 					createLine(
-						"building product systems, backend services, and AI workflows",
+						"building backend systems, AI workflows, and product infrastructure",
 					),
 				],
 			},
 			stack: {
 				description: "List core technologies",
 				run: () => [
-					createLine("frontend: React, Next.js, CSS systems", "ok"),
+					createLine("frontend: React, Next.js", "ok"),
 					createLine(
-						"backend: Node.js, Python, Java, service architecture",
+						"backend: Node.js, Python, Java",
 					),
 					createLine(
-						"infra: Kubernetes, Docker, cloud-native delivery",
+						"infra: Kubernetes, Docker, cloud systems",
 					),
 					createLine(
-						"ai: agent workflows, RAG, practical automation",
+						"ai: agents, RAG, automation",
 					),
 				],
 			},

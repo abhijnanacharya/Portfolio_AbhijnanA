@@ -40,29 +40,17 @@ const Contact = () => {
 					<div className="contact-container">
 						<div className="section-label">Signal Channel</div>
 						<div className="title contact-title">
-							Let&apos;s Get in Touch: Ways to Connect with Me
+							Let&apos;s build the next thing.
 						</div>
 
 						<div className="subtitle contact-subtitle">
-							Thank you for reaching out! Your feedback,
-							questions, and suggestions are always appreciated.
-							For direct inquiries, please email me at &nbsp;{" "}
+							For roles, collaborations, or technical conversations,
+							email me at &nbsp;{" "}
 							<a href={`mailto:${INFO.main.email}`}>
 								{INFO.main.email}
 							</a>
-							. I strive to respond within 24 hours, or a bit
-							longer during busy times. Connect on{" "}
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								Instagram
-							</a>
-							&nbsp; for regular updates and engaging discussions.
-							I appreciate your interest and look forward to
-							hearing from you! Thanks again for your interest,
-							and I look forward to hearing from you!
+							&nbsp;or send a quick note below. I&apos;ll reply when
+							I&apos;ve had time to read it properly.
 						</div>
 
 						<form

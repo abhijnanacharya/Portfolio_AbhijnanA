@@ -2,11 +2,11 @@ import React from "react";
 
 
 const tickerItems = [
-	"SYSTEMS ONLINE",
+	"SYSTEMS BUILDER",
 	"AI WORKFLOWS",
-	"REACT / JAVA / NODE / PYTHON",
+	"BACKEND / CLOUD",
+	"REACT / NODE / PYTHON",
 	"K8S READY",
-	"OPEN TO BUILD",
 	"SF BASED",
 ];
 

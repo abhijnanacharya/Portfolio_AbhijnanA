@@ -26,17 +26,17 @@ const Hero = () => {
 			<div className="hero-copy">
 				<div className="hero-eyebrow">SOFTWARE ENGINEER · MICROSOFT XBOX ADS</div>
 				<h1 id="hero-title" className="hero-title">
-					<span>BUILDING ADS,</span>
-					<span>PRODUCT SYSTEMS</span>
+					<span>BACKEND SYSTEMS.</span>
+					<span>AI WORKFLOWS.</span>
 					<span>
-						<span className="hero-highlight">& AI</span> THAT SCALE.
+						<span className="hero-highlight">PRODUCT</span> INFRA.
 					</span>
 				</h1>
 				<p className="hero-description">{INFO.homepage.description}</p>
 				<div className="hero-actions" aria-label="Primary actions">
-					<CTAButton to="/projects">View Projects</CTAButton>
+					<CTAButton to="/projects">See Work</CTAButton>
 					<CTAButton to="/contact" variant="secondary" icon={faEnvelopeOpenText}>
-						Contact Me
+						Contact
 					</CTAButton>
 				</div>
 			</div>

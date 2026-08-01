@@ -48,7 +48,7 @@ const NavBar = (props) => {
 						<FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
 					</a>
 					<CTAButton to="/contact" className="nav-cta">
-						Hire Me
+						Contact
 					</CTAButton>
 				</div>
 			</nav>

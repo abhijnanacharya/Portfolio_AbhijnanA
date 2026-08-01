@@ -1,0 +1,30 @@
+[
+	{
+		"id": "email",
+		"label": "Email",
+		"href": "mailto:abhijnanacharya11@gmail.com",
+		"icon": "email",
+		"enabled": true
+	},
+	{
+		"id": "resume",
+		"label": "Resume",
+		"href": "/resume.pdf",
+		"icon": "resume",
+		"enabled": false
+	},
+	{
+		"id": "linkedin",
+		"label": "LinkedIn",
+		"href": "https://www.linkedin.com/in/abhijnanacharya/",
+		"icon": "linkedin",
+		"enabled": true
+	},
+	{
+		"id": "github",
+		"label": "GitHub",
+		"href": "https://github.com/abhijnanacharya",
+		"icon": "github",
+		"enabled": true
+	}
+]

@@ -5,6 +5,7 @@ import posthog from "posthog-js";
 
 import { TRACKING_ID } from "../data/tracking";
 import CommandPalette from "../components/common/CommandPalette";
+import MobileQuickActions from "../components/common/MobileQuickActions";
 import SecretConsoleMessage from "../components/common/SecretConsoleMessage";
 import TerminalOverlay from "../components/common/TerminalOverlay";
 
@@ -26,6 +27,7 @@ import "../components/common/styles/ctaButton.css";
 import "../components/common/styles/featureCard.css";
 import "../components/common/styles/footer.css";
 import "../components/common/styles/logo.css";
+import "../components/common/styles/mobileQuickActions.css";
 import "../components/common/styles/navBar.css";
 import "../components/common/styles/statusTicker.css";
 import "../components/common/styles/sticker.css";
@@ -60,6 +62,7 @@ const App = ({ Component, pageProps }) => {
 			<CommandPalette />
 			<SecretConsoleMessage />
 			<TerminalOverlay />
+			<MobileQuickActions />
 			<Component {...pageProps} />
 		</>
 	);

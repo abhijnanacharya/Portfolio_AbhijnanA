@@ -23,16 +23,16 @@ const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
-	const [loading, setLoading] = useState(() => {
-		if (typeof window === "undefined") {
-			return false;
-		}
-
-		return sessionStorage.getItem(HOME_LOADER_SEEN_KEY) !== "true";
-	});
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
+	}, []);
+
+	useEffect(() => {
+		if (sessionStorage.getItem(HOME_LOADER_SEEN_KEY) !== "true") {
+			setLoading(true);
+		}
 	}, []);
 
 	useEffect(() => {
@@ -145,7 +145,7 @@ const Homepage = () => {
 						</div>
 
 						<div className="homepage-projects">
-							<div className="section-label">Selected Builds</div>
+							<div className="section-label">Proof of Build</div>
 							<AllProjects />
 						</div>
 
