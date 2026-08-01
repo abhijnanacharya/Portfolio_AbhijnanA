@@ -9,7 +9,6 @@ import Socials from "../components/about/socials";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-
 const Contact = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -44,13 +43,13 @@ const Contact = () => {
 						</div>
 
 						<div className="subtitle contact-subtitle">
-							For roles, collaborations, or technical conversations,
-							email me at &nbsp;{" "}
+							For roles, collaborations, or technical
+							conversations, email me at &nbsp;{" "}
 							<a href={`mailto:${INFO.main.email}`}>
 								{INFO.main.email}
 							</a>
-							&nbsp;or send a quick note below. I&apos;ll reply when
-							I&apos;ve had time to read it properly.
+							&nbsp;or send a quick note below. I&apos;ll reply
+							when I&apos;ve had time to read it properly.
 						</div>
 
 						<form
@@ -61,18 +60,26 @@ const Contact = () => {
 							netlify-honeypot="bot-field"
 							className="interest-form"
 						>
-							<input type="hidden" name="form-name" value="interest" />
+							<input
+								type="hidden"
+								name="form-name"
+								value="interest"
+							/>
 							<p className="form-hidden">
 								<label>
-									Don&apos;t fill this out if you&apos;re human:
+									Don&apos;t fill this out if you&apos;re
+									human:
 									<input name="bot-field" />
 								</label>
 							</p>
 
 							<div className="interest-form-header">
-								<div className="section-label">Interest Form</div>
+								<div className="section-label">
+									Interest Form
+								</div>
 								<p>
-									Share a little context and I&apos;ll follow up by email.
+									Share a little context and I&apos;ll follow
+									up by email.
 								</p>
 							</div>
 
@@ -99,14 +106,29 @@ const Contact = () => {
 
 								<label className="form-field">
 									<span>Interest</span>
-									<select name="interestType" required defaultValue="">
+									<select
+										name="interestType"
+										required
+										defaultValue=""
+									>
 										<option value="" disabled>
 											Select one
 										</option>
-										<option value="collaboration">Collaboration</option>
-										<option value="consulting">Consulting</option>
-										<option value="startup">Startup / product idea</option>
-										<option value="speaking">Speaking / writing</option>
+										<option value="collaboration">
+											Collaboration
+										</option>
+										<option value="consulting">
+											Consulting
+										</option>
+										<option value="startup">
+											Startup / product idea
+										</option>
+										<option value="speaking">
+											Speaking / writing
+										</option>
+										<option value="mentorship">
+											Mentorship
+										</option>
 										<option value="other">Other</option>
 									</select>
 								</label>
@@ -116,7 +138,9 @@ const Contact = () => {
 									<select name="timeline" defaultValue="">
 										<option value="">Flexible</option>
 										<option value="now">Now</option>
-										<option value="1-3-months">1-3 months</option>
+										<option value="1-3-months">
+											1-3 months
+										</option>
 										<option value="later">Later</option>
 									</select>
 								</label>
