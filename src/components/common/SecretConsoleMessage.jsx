@@ -39,7 +39,6 @@ const SecretConsoleMessage = () => {
 			unlock: () => {
 				localStorage.setItem(SECRET_CONSOLE_UNLOCK_KEY, "true");
 				setShowAchievement(true);
-				window.dispatchEvent(new Event("portfolio:open-command-palette"));
 				return "ACHIEVEMENT_UNLOCKED: CONSOLE OPERATIONS";
 			},
 			terminal: () => {
