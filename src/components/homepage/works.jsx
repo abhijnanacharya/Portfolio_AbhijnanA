@@ -3,7 +3,6 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../common/card";
 
-
 const Works = () => {
 	return (
 		<div className="works">
@@ -14,7 +13,7 @@ const Works = () => {
 					<div className="works-body">
 						<div className="work work-wide-logo">
 							<img
-								src="https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/960px-Microsoft_logo.svg.png?_=20210729021049"
 								alt="MSFT"
 								className="work-image work-image-wide"
 							/>
