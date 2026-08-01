@@ -4,6 +4,7 @@ import ReactGA from "react-ga4";
 import posthog from "posthog-js";
 
 import { TRACKING_ID } from "../data/tracking";
+import CommandPalette from "../components/common/CommandPalette";
 
 import "../index.css";
 import "../app.css";
@@ -18,6 +19,7 @@ import "../components/about/styles/socials.css";
 import "../components/articles/style/article.css";
 import "../components/common/styles/achievementToast.css";
 import "../components/common/styles/card.css";
+import "../components/common/styles/commandPalette.css";
 import "../components/common/styles/ctaButton.css";
 import "../components/common/styles/featureCard.css";
 import "../components/common/styles/footer.css";
@@ -52,6 +54,7 @@ const App = ({ Component, pageProps }) => {
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
+			<CommandPalette />
 			<Component {...pageProps} />
 		</>
 	);
