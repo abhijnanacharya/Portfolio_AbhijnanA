@@ -13,7 +13,7 @@ const Works = () => {
 					<div className="works-body">
 						<div className="work work-wide-logo">
 							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/960px-Microsoft_logo.svg.png?_=20210729021049"
+								src="Microsoft_logo.png"
 								alt="MSFT"
 								className="work-image work-image-wide"
 								loading="lazy"
