@@ -4,4 +4,3 @@ https://abhijnan.netlify.app/contact
 https://abhijnan.netlify.app/projects
 https://abhijnan.netlify.app/articles
 https://abhijnan.netlify.app/article/1
-https://abhijnan.netlify.app/article/2

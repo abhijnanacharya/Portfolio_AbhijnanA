@@ -5,7 +5,21 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 const Article = (props) => {
-	const { date, title, description, link } = props;
+	const { date, title, description, link, external } = props;
+
+	const articleContent = (
+		<div className="article-right-side">
+			<div className="article-title">{title}</div>
+			<div className="article-description">{description}</div>
+			<div className="article-link">
+				{external ? "Read on Medium" : "Read Article"}{" "}
+				<FontAwesomeIcon
+					style={{ fontSize: "10px" }}
+					icon={faChevronRight}
+				/>
+			</div>
+		</div>
+	);
 
 	return (
 		<React.Fragment>
@@ -14,19 +28,13 @@ const Article = (props) => {
 					<div className="article-date">{date}</div>
 				</div>
 
-				<Link href={link}>
-					<div className="article-right-side">
-						<div className="article-title">{title}</div>
-						<div className="article-description">{description}</div>
-						<div className="article-link">
-							Read Article{" "}
-							<FontAwesomeIcon
-								style={{ fontSize: "10px" }}
-								icon={faChevronRight}
-							/>
-						</div>
-					</div>
-				</Link>
+				{external ? (
+					<a href={link} target="_blank" rel="noreferrer">
+						{articleContent}
+					</a>
+				) : (
+					<Link href={link}>{articleContent}</Link>
+				)}
 			</div>
 		</React.Fragment>
 	);

@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 import NavBar from "../../components/common/navBar";
 import Footer from "../../components/common/footer";
-import Logo from "../../components/common/logo";
 
 import INFO from "../../data/user";
 import myArticles from "../../data/articles";
@@ -41,12 +40,6 @@ const ReadArticle = ({ slug }) => {
 				<NavBar />
 
 				<div className="content-wrapper">
-					<div className="read-article-logo-container">
-						<div className="read-article-logo">
-							<Logo width={46} />
-						</div>
-					</div>
-
 					<div className="read-article-container">
 						<div className="read-article-back">
 							<img

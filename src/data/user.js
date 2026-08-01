@@ -28,9 +28,9 @@ const INFO = {
 	},
 
 	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
+		title: "Technical writing",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+			"Long-form engineering notes on distributed systems, backend design, and practical software architecture.",
 	},
 
 	projects: [
