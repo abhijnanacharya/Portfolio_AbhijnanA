@@ -92,6 +92,17 @@ const CommandPalette = () => {
 				},
 			},
 			{
+				id: "terminal",
+				label: "Open Terminal",
+				description: "Launch the hidden developer shell",
+				group: "Actions",
+				icon: faTerminal,
+				keywords: "shell console backtick tilde easter egg",
+				run: () => {
+					window.dispatchEvent(new Event("portfolio:open-terminal"));
+				},
+			},
+			{
 				id: "github",
 				label: "Open GitHub",
 				description: "View source and repositories",

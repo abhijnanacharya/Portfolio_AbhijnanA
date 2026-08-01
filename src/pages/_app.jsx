@@ -5,6 +5,7 @@ import posthog from "posthog-js";
 
 import { TRACKING_ID } from "../data/tracking";
 import CommandPalette from "../components/common/CommandPalette";
+import TerminalOverlay from "../components/common/TerminalOverlay";
 
 import "../index.css";
 import "../app.css";
@@ -27,6 +28,7 @@ import "../components/common/styles/logo.css";
 import "../components/common/styles/navBar.css";
 import "../components/common/styles/statusTicker.css";
 import "../components/common/styles/sticker.css";
+import "../components/common/styles/terminalOverlay.css";
 import "../components/homepage/styles/article.css";
 import "../components/homepage/styles/hero.css";
 import "../components/homepage/styles/loader.css";
@@ -55,6 +57,7 @@ const App = ({ Component, pageProps }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
 			<CommandPalette />
+			<TerminalOverlay />
 			<Component {...pageProps} />
 		</>
 	);
