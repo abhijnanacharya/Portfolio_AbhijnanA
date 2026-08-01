@@ -18,6 +18,7 @@ import {
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import INFO from "../../data/user";
+import { lockBodyScroll } from "../../utils/bodyScrollLock";
 
 const normalize = (value) => value.toLowerCase().trim();
 
@@ -181,13 +182,10 @@ const CommandPalette = () => {
 			return undefined;
 		}
 
-		const originalOverflow = document.body.style.overflow;
-		document.body.style.overflow = "hidden";
+		const unlockBodyScroll = lockBodyScroll();
 		window.setTimeout(() => inputRef.current?.focus(), 0);
 
-		return () => {
-			document.body.style.overflow = originalOverflow;
-		};
+		return unlockBodyScroll;
 	}, [isOpen]);
 
 	useEffect(() => {
